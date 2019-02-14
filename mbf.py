@@ -332,7 +332,7 @@ def menu():
                    /+/++//
             \rk*   *\rh /+/++//
              \ /  |/__//
-           {\rmX\rh}v{\rmX\rh}|\rcPRX\rh|==========.
+           {\rmX\rh}v{\rmX\rh}|\rcf4dl\rh|==========.
              [']  /'|'\           \\
                  /  \  \           '
                  \_  \_ \_    \rk*\rhDragonFly ZomBie
